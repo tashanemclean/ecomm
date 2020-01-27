@@ -17,13 +17,21 @@ body {
     color: #808080;
 }
 
+
 @import 'layout.scss';
 @import 'headernavbar.scss';
-@import 'auth/signin.scss';
-@import 'auth/signup.scss';
 @import 'pageTitle.scss';
 @import 'form-fields.scss';
 @import 'details.scss';
+
+// AUTH
+@import 'auth/signin.scss';
+@import 'auth/signup.scss';
+
+// ACCOUNT
 @import "account/account-information.scss";
 @import "account/purchase-history.scss";
 @import "account/account.scss";
+
+// SHOP
+@import "shop/shop.scss";
