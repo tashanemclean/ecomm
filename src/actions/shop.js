@@ -6,7 +6,6 @@ import {
 } from './types';
 
 export function filterProductsWithCategoryId(_id) {
-    console.log(_id);
     return ({
         type: FILTER_PRODUCTS_WITH_CATEGORY_ID,
         payload: _id
@@ -19,31 +18,31 @@ export function fetchShopCategories() {
         payload: [
             {
                 _id: 0,
-                title: 'All'
+                title: 'ALL'
             },
             {
                 _id: 1,
-                title: 'JavaScript'
+                title: 'PRODUCTS'
             },
             {
                 _id: 2,
-                title: 'UI/UX'
+                title: 'BUY'
             },
             {
                 _id: 3,
-                title: 'Linux'
+                title: 'RESOURCES'
             },
             {
                 _id: 4,
-                title: 'Python'
+                title: 'PROMOTIONS'
             },
             {
                 _id: 5,
-                title: 'UML'
+                title: 'WHO WE ARE'
             },
             {
                 _id: 6,
-                title: 'Ruby'
+                title: 'CONTACT US'
             }
         ]
     })
