@@ -13,7 +13,7 @@ function CartContent({className, products}) {
     let count = products.length;
     let productsJSX = products.map(product => <CartProduct key={product} />)
     return (
-        <div className={`${className} cart-conent`} >
+        <div className={`${className} cart-content`} >
             <div className='cart-content__title'>
                 Cart {count}
             </div>
@@ -48,7 +48,7 @@ class ShopCart extends Component {
         return (
             <div className={`${className} shop-cart`}>
                 <CartButton className='shop-cart__toggle' icon='fas fa-times' />
-                <CartContent className='shop-cart__conent' products={[343,4534,545,343,4534,545,343,4534,545,343,4534,545,343,4534,545]} />
+                <CartContent className='shop-cart__content' products={[343,4534,545,343,4534,545,343,4534,545,343,4534,545,343,4534,545]} />
             </div>
         )
     }
