@@ -4,7 +4,7 @@ import * as actions from '../../actions';
 import ShopSearchBar from './shopSearchBar';
 import ShopProduct from './shopProduct';
 
-import CartButton from './CartButton';
+import CartButton from './cartButton';
 import ShopCart from './shopCart';
 
 class Shop extends Component {
@@ -50,23 +50,25 @@ class Shop extends Component {
     }
 
     render() {
+        return <ShopCart className='shop__cart' />
+
         return (
-        <div className='shop'>
-            <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar' />
-            <div className='shop__products'>
-            {
-                this.props.filteredProducts.map(product => {
-                    return (
-                        <ShopProduct {...product} key={product._id} />
-                    )
-                })
-            }
+            <div className='shop'>
+                <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar' />
+                <div className='shop__products'>
+                {
+                    this.props.filteredProducts.map(product => {
+                        return (
+                            <ShopProduct {...product} key={product._id} />
+                        )
+                    })
+                }
+                </div>
+                {
+                    this.state.showCart ? <ShopCart className='shop__cart' />: ''
+                }
+                <CartButton onClick={this.handleAddToCart} className='shop__cart-button' icon='fas fa-cart-plus' />
             </div>
-            {
-                this.state.showCart ? <ShopCart className='shop__cart' />: ''
-            }
-            <CartButton onClick={this.handleAddToCart} className='shop__cart-button' icon='fas fa-cart-plus' />
-        </div>
         )
     }
 }
