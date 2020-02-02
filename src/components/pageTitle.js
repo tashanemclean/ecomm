@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 
-export default class PageTitle extends Component {
+class PageTitle extends Component {
     render(){
         const {className, title} = this.props
         return(
@@ -9,3 +9,4 @@ export default class PageTitle extends Component {
     }
 }
 
+export default PageTitle;
