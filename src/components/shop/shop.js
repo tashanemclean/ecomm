@@ -41,6 +41,14 @@ class Shop extends Component {
         this.props.filterProductsWithQuery(fields)
     }
 
+    handleAddToCart = () => {
+        if(document.getElementById('shop-cart').classList.contains('cart-hidden')) {
+            document.getElementById('shop-cart').classList.remove('cart-hidden')
+        } else {
+            document.getElementById('shop-cart').classList.add('cart-hidden')
+        }
+    }
+
     render() {
         // return <ShopCart className='shop__cart' />
 
@@ -59,7 +67,7 @@ class Shop extends Component {
                 {
                     this.state.showCart ? <ShopCart className='shop__cart' />: ''
                 }
-                <CartButton className='shop__cart-button' icon='fas fa-cart-plus' />
+                <CartButton onClick={this.handleAddToCart} className='shop__cart-button' icon='fas fa-cart-plus' />
             </div>
         )
     }
