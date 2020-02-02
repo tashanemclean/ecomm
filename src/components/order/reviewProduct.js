@@ -8,9 +8,9 @@ class ReviewProduct extends Component {
         return (
             <div className='review-product'>
                 <img className='review-product__image' src={imageUrl} />
-                <div className='review-Product__title'>{title}</div>
-                <div className='review-Product__quantity'>{quantity}</div>
-                <GreenPriceTag className='review-Product__price' title={price * quantity}/>
+                <div className='review-product__title'>{title}</div>
+                <div className='review-product__quantity'>{quantity}</div>
+                <GreenPriceTag className='review-product__price' title={price * quantity}/>
             </div>
         )
     }
