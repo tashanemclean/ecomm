@@ -45,7 +45,7 @@
 .cart-content {
     display: grid;
     grid-template-rows: 25px [title-s] 40px [title-s products-s] 1fr [products-e footer-s] 113px [footer-e];
-    grid-template-columns: [footer-s] 30px [s] 50vh [e] 30px [footer-e];
+    grid-template-columns: [footer-s] 30px [s] 55vh [e] 30px [footer-e];
 
     &__title {
         grid-column: s/e;
@@ -63,6 +63,7 @@
         grid-row: products-s/products-e;
         display: grid;
         overflow-y: scroll;
+        grid-row-gap: 45px;
     }
 
     &__footer {
