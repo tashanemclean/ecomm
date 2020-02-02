@@ -23,6 +23,7 @@ const INITIAL_STATE = {
 
 export default function(state = INITIAL_STATE, action) {
     switch (action.type){
+        // things to do on backend
         case ADD_CART_PRODUCT:
         var exists = false
             const newCp = action.payload

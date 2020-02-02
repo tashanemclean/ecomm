@@ -6,7 +6,6 @@ import CartButton from './cartButton';
 
 function CartContent({className, products}) {
     let count = products.length;
-    console.log(products)
     let productsJSX = products.map(product => <CartProduct {...product} key={product._id} />)
     return (
         <div className={`${className} cart-content`} >
