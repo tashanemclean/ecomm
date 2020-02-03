@@ -1,9 +1,9 @@
-import React, {Component} from "react"
+import React, {Component} from "react";
 
-import SignInForm from "./signinForm"
-import PageTitle from "../pageTitle"
-import {connect} from 'react-redux'
-import * as actions from '../../actions'
+import SignInForm from "./signinForm";
+import PageTitle from "../pageTitle";
+import {connect} from 'react-redux';
+import * as actions from '../../actions';
 
 
 class SignIn extends Component {
@@ -14,7 +14,8 @@ class SignIn extends Component {
     }
 
     onSubmit = (fields) => {
-        console.log(fields)
+        this.props.signIn(fields)
+        this.props.history.push('/account')
     }
 
     render () {
